@@ -1,0 +1,12 @@
+
+<h3>Tweets</h3>
+<% @tweets.each do |tweet| %>
+    <h4><a href="/tweets/<%= tweet.id %>"><%= tweet.created_at_stamp %></a></h4>
+    <p><%= tweet.content %></p>
+    <p>By <%= tweet.user.username %></p>
+<% end %>
+
+<br>
+<a href="/tweets/new">Click here to create a New Tweet</a>
+<br>
+<a href="/logout">Log Out</a>

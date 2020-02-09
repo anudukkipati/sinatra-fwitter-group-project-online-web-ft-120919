@@ -1,0 +1,17 @@
+
+
+<p><%= @tweet.content %></p>
+
+<p>Created by: <%= @tweet.user.username %></p>
+
+<p>Created On: <%= @tweet.created_at_stamp %></p>
+<% if @tweet.user == current_user %>
+   <a href="/tweets/<%= @tweet.id %>/edit">Edit Entry</a>
+   <br><br>
+   <form action="/tweets/<%= @tweet.id %>" method="post">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" name="" value="Delete Tweet">
+  </form>
+<% end %>
+<p><a href="/tweets">Go to Tweets Home Page</a></p>
+<p><a href="/logout">LOG OUT</a></p>

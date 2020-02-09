@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/bmabey/database_cleaner.git
+  revision: 0f4e29d0adf207e961e1ea18562a828a8c1017fd
+  specs:
+    database_cleaner (1.8.2)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -27,7 +33,6 @@ GEM
     coderay (1.1.2)
     concurrent-ruby (1.1.5)
     daemons (1.3.1)
-    database_cleaner (1.7.0)
     diff-lcs (1.3)
     eventmachine (1.2.7)
     i18n (1.7.0)
@@ -82,6 +87,8 @@ GEM
     sinatra-activerecord (2.0.14)
       activerecord (>= 3.2)
       sinatra (>= 1.0)
+    sinatra-flash (0.3.0)
+      sinatra (>= 1.0.0)
     sqlite3 (1.4.1)
     thin (1.7.2)
       daemons (~> 1.0, >= 1.0.9)
@@ -107,7 +114,7 @@ DEPENDENCIES
   activerecord (~> 6.0.0)
   bcrypt
   capybara
-  database_cleaner
+  database_cleaner!
   pry
   rack-test
   rake
@@ -116,6 +123,7 @@ DEPENDENCIES
   shotgun
   sinatra
   sinatra-activerecord
+  sinatra-flash
   sqlite3
   thin
   tux

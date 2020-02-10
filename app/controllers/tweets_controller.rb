@@ -1,6 +1,7 @@
 class TweetsController < ApplicationController
 
      get '/tweets' do
+      redirect_if_not_logged_in
          @tweets = Tweet.all
           erb :'/tweets/index'
 
